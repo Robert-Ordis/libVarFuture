@@ -1,0 +1,1 @@
+#CROSS_PREFIX = /the/path/to/cross/build/prefix-(gcc|ar)
