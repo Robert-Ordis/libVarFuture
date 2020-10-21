@@ -14,6 +14,17 @@
 #include <stdint.h>
 
 /**
+ *	\def		varfuture_primitive_prototypes
+ *	\brief		Witchcraft used in the header(*.h).
+ *				Implement the types and function named "[type]_future_xxx".
+ *	\param		ret_type		Return type, and basename.
+ *	\remarks	NOT USABLE FOR POINTER OR STRUCTURE.
+ *	\remarks	void is already implemented.
+ */
+#define	varfuture_primitive_prototypes(ret_type)\
+	varfuture_define_prototypes(ret_type, ret_type)
+
+/**
  *	\def		varfuture_define_prototypes
  *	\param		ret_type		futureオブジェクトが取り扱う返値の型。ポインタも構造体も一応行ける。
  *	\param		basename		各オブジェクト/関数の先頭につける名前。int_future_tとかint_future_getみたいな。

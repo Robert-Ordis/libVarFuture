@@ -7,6 +7,7 @@
 #include <pthread.h>
 
 void test_int(void *arg);
+void test_int2(void *arg);
 void test_double(void *arg);
 
 void tekitou(void *arg){
@@ -142,6 +143,7 @@ int main(int argc, char *argv[]){
 	
 	//pthread_join(at, NULL);
 	test_int(NULL);
+	test_int2(NULL);
 	test_double(NULL);
 	return 0;
 }

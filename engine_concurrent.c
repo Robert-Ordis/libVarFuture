@@ -157,6 +157,7 @@ int	varfuture_concurrent_init(int tp_num){
  *	\brief		バックグラウンドスレッドに関するキューを一つ取得する
  *	\return	(ptr)バックグラウンドスレッド用のキューのポインタ
  *	\remarks	ただし、バックグラウンドスレッドから命令された場合はNULLを返す
+ *	\todo		スレッドの進行状況を見てビジーに陥りそうならisolateに誘導する
  */
 varfuture_queue_t* varfuture_concurrent_get_threadpool_queue(){
 	varfuture_queue_t *ret_queue = NULL;

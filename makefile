@@ -21,6 +21,7 @@ SRC_LIBPART		=\
 SRC_PROGRAM		=\
 				 main.c\
 				 int_test.c\
+				 int_test2.c\
 				 double_test.c\
 				 mini/minitest.c
 
