@@ -9,6 +9,8 @@
 #include <stdlib.h>
 
 
-varfuture_define_implements(int, int, 0);
+//varfuture_define_implements(int, int, 0);
+
+varfuture_primitive_implements(int, 0);
 
 varfuture_define_implements(double, double, 0.0);
