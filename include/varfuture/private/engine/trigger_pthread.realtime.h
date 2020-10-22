@@ -19,6 +19,9 @@ typedef pthread_condattr_t		varfuture_condattr_t;
 #define	VARFUTURE_LOCK_GLOBAL_INIT PTHREAD_MUTEX_INITIALIZER;
 #define	VARFUTURE_COND_GLOBAL_INIT PTHREAD_COND_INITIALIZER;
 
+#warning "In any reason, using "varfuture_timedget" family in CLOCK_REALTIME is NOT RECOMMENDED."
+#warning "I provide "varfuture_is_finished" instead."
+
 #define varfuture_lock_init(lock, err_ret)\
 	do{\
 		*(err_ret) = pthread_mutex_init(lock, NULL);\
@@ -97,7 +100,7 @@ typedef pthread_condattr_t		varfuture_condattr_t;
 			varfuture_trigger_acquire(trigger, err_ret);\
 			break;\
 		}\
-		printf("%s: timed wait in REALTIME...(omg)\n", __func__);\
+		/*printf("%s: timed wait in REALTIME...(omg)\n", __func__);*/\
 		if(clock_gettime(CLOCK_REALTIME, &tsp) < 0)\
 			*(err_ret) = errno;\
 		tsp.tv_nsec += tv_nsec_add;\

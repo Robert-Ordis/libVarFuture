@@ -2,5 +2,6 @@
 #define	VARFUTURE_DEPEND_H
 
 #define VARFUTURE_USE_PTHREAD
+//#define NO_CONDATTR_SETLOCK
 
 #endif	/* !VARFUTURE_DEPEND_H */
