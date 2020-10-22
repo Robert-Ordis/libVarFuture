@@ -1,15 +1,16 @@
-#include "./include/varfuture/private/body.h"
-#include "./include/varfuture/varfuture_attr.h"
-#include "./include/varfuture/void_future.h"
-#include "./include/varfuture/private/engine/concurrent_api.h"
-#include "./include/varfuture/private/queue_api.h"
-#include "./include/varfuture/private/inline_processes.h"
+#include "varfuture/private/body.h"
+#include "varfuture/varfuture_attr.h"
+#include "varfuture/void_future.h"
+#include "varfuture/private/engine/concurrent_api.h"
+#include "varfuture/private/queue_api.h"
+#include "varfuture/private/inline_processes.h"
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 
 //起動前検査
 //マクロ化可能関数
+
 static inline int void_future_before_exec_invoke_(void_future_t *future){
 	
 	int ret = 0;

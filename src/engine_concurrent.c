@@ -8,13 +8,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
-#include "./include/varfuture/private/engine/trigger.h"
-#include "./include/varfuture/private/body.h"
-#include "./include/varfuture/private/engine/threadpool.h"
-#include "./include/varfuture/private/engine/concurrent_api.h"
-#include "./include/varfuture/private/queue.h"
-#include "./include/varfuture/private/queue_api.h"
-#include "./include/varfuture/varfuture_depend.h"
+#include "varfuture/private/engine/trigger.h"
+#include "varfuture/private/body.h"
+#include "varfuture/private/engine/threadpool.h"
+#include "varfuture/private/engine/concurrent_api.h"
+#include "varfuture/private/queue.h"
+#include "varfuture/private/queue_api.h"
+#include "varfuture/varfuture_depend.h"
 
 //グローバルエリアでのロックの素材
 static varfuture_lock_t	global_lock = VARFUTURE_LOCK_GLOBAL_INIT;

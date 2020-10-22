@@ -9,21 +9,23 @@ TARGET_ALIB		= libvarfuture.a
 TARGET_SLIB		= libvarfuture.so
 
 ####Source files####
+SRC_DIR			= ./src
+TST_DIR			= ./test
 
 SRC_LIBPART		=\
-				 void_future.c\
-				 primitives.c\
-				 varfuture_globals.c\
-				 varfuture_queue.c\
-				 engine_concurrent.c\
-				 engine_threadpool.c\
+				 $(SRC_DIR)/void_future.c\
+				 $(SRC_DIR)/primitives.c\
+				 $(SRC_DIR)/varfuture_globals.c\
+				 $(SRC_DIR)/varfuture_queue.c\
+				 $(SRC_DIR)/engine_concurrent.c\
+				 $(SRC_DIR)/engine_threadpool.c\
 
 SRC_PROGRAM		=\
-				 main.c\
-				 int_test.c\
-				 int_test2.c\
-				 double_test.c\
-				 mini/minitest.c
+				 $(TST_DIR)/main.c\
+				 $(TST_DIR)/int_test.c\
+				 $(TST_DIR)/int_test2.c\
+				 $(TST_DIR)/double_test.c\
+				 $(TST_DIR)/mini/minitest.c
 
 #### default compilers ####
 CC	= gcc

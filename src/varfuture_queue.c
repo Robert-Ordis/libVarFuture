@@ -8,10 +8,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
-#include "./include/varfuture/private/body.h"
-#include "./include/varfuture/private/queue_api.h"
-#include "./include/varfuture/private/queue.h"
-#include "./include/varfuture/private/engine/trigger.h"
+#include "varfuture/private/body.h"
+#include "varfuture/private/queue_api.h"
+#include "varfuture/private/queue.h"
+#include "varfuture/private/engine/trigger.h"
 
 
 //初期化。今後のために外から同期用のトリガーをもらっておく

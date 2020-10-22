@@ -8,12 +8,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
-#include "./include/varfuture/varfuture.h"
-#include "./include/varfuture/private/engine/trigger.h"
-#include "./include/varfuture/private/body.h"
-#include "./include/varfuture/private/engine/threadpool.h"
-#include "./include/varfuture/private/engine/concurrent_api.h"
-#include "./include/varfuture/varfuture_depend.h"
+#include "varfuture/varfuture.h"
+#include "varfuture/private/engine/trigger.h"
+#include "varfuture/private/body.h"
+#include "varfuture/private/engine/threadpool.h"
+#include "varfuture/private/engine/concurrent_api.h"
+#include "varfuture/varfuture_depend.h"
 
 
 /**

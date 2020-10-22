@@ -3,6 +3,6 @@
 install
 *.a
 *.so
-testProgram
+testProgram*
 makefile.old
 old/*
