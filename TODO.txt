@@ -1,0 +1,15 @@
+・doxygenの英文化。
+・varpromise_yield(_result/_error)を実装する。
+　→仕組みの問題で、これだけは複数スレッドでの待機を禁止。
+　→promise側も、多分一度yieldしたらgetされるまではブロックするんじゃなかろうか。
+
+・varpromise_init_for_yield
+　→単なる識別フラグ立て。
+　　→register_to_promiseは1個しかできない。いっそassertでもやっちゃう？
+　→varpromise_yield(basename, promise, ret, err_num)：getは1度だけできる。is_finishedは0のまま。
+　　→多分一度呼んだらgetされるまでは放置。
+　　→init_for_yieldをしないと使えない。
+　→varpromise_return(略)でis_finishedが立つ。
+　→varfuture_is_yielded(略): yieldされてるかどうか。
+　
+・varpromise_init_for_return
